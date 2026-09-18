@@ -1,0 +1,14 @@
+{
+  "workflowVersion": "LRA-SANDBOX-1.0.0",
+  "timeZone": "America/Chicago",
+  "businessHours": { "start": 9, "end": 17 },
+  "holidayDates": [],
+  "allowedSources": ["website-form", "shared-inbox"],
+  "syntheticEmailDomains": ["example.com", "test.invalid"],
+  "syntheticPhonePrefix": "+1555000",
+  "bookingUrl": "https://example.com/lead-automation-demo-booking",
+  "routingMode": "SYNTHETIC DEMO ROUTING URL",
+  "maxRetries": 2,
+  "primaryAlertRecipient": "primary-operator@example.com",
+  "backupAlertRecipient": "backup-operator@example.com"
+}

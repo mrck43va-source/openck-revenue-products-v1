@@ -1,0 +1,11 @@
+﻿{
+  "name": "Lead Response Automation V1",
+  "short_name": "Lead Response",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#0d1c2d",
+  "description": "Synthetic investor and prospect demonstration of a bounded lead-response workflow.",
+  "icons": [{ "src": "./icon-180.png", "sizes": "180x180", "type": "image/png" }]
+}

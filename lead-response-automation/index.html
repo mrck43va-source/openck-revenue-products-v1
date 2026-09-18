@@ -1,0 +1,119 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lead Response Automation Services &mdash; Synthetic Demo</title>
+  <meta name="description" content="Synthetic demonstration of a bounded lead-response automation workflow by Charles Kiser &mdash; Lead Response Automation Services.">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-180.png">
+  <meta name="theme-color" content="#0d1c2d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lead Response">
+</head>
+<body>
+  <header>
+    <p class="eyebrow">CHARLES KISER &mdash; LEAD RESPONSE AUTOMATION SERVICES</p>
+    <h1>Lead Response Automation Implementation</h1>
+    <p class="lede">Synthetic demonstration of a bounded lead-response workflow. No client systems are connected and no external messages are sent.</p>
+    <p class="environment-label">SYNTHETIC DEMO DATA ONLY</p>
+    <p class="environment-detail">DEMONSTRATION ENVIRONMENT &middot; NO CLIENT SYSTEMS CONNECTED &middot; NOT PRODUCTION</p>
+    <div class="status-row">
+      <span id="modeBadge" class="badge safe">SIMULATION ONLY</span>
+      <span id="pauseBadge" class="badge safe">ACTIVE</span>
+      <span id="versionBadge" class="badge neutral">LRA-SANDBOX</span>
+    </div>
+  </header>
+
+  <main>
+    <section class="workflow" aria-label="Workflow overview">
+      <p class="view-label">CLIENT-FACING SUMMARY</p>
+      <div><strong>1</strong><span>Inquiry</span></div><i>&rarr;</i>
+      <div><strong>2</strong><span>Validate</span></div><i>&rarr;</i>
+      <div><strong>3</strong><span>Log + alert</span></div><i>&rarr;</i>
+      <div><strong>4</strong><span>Acknowledge</span></div><i>&rarr;</i>
+      <div><strong>5</strong><span>Route + stop</span></div>
+    </section>
+
+    <section class="workspace">
+      <form id="leadForm" class="panel operator-panel">
+        <div class="panel-heading">
+          <div><p class="kicker">Synthetic test event</p><p class="view-label">OPERATOR / DEMO CONTROLS</p><h2>Submit an inquiry</h2></div>
+          <button type="button" id="newEvent">New ID</button>
+        </div>
+        <label>Event ID<input id="eventId" required></label>
+        <label>Source<select id="source"><option value="website-form">Website form</option><option value="shared-inbox">Shared inbox</option></select></label>
+        <label>Name<input id="leadName" <link rel="stylesheet" href="./styles.css">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="apple-touch-icon" href="./icon-180.png">
+  <meta name="theme-color" content="#0d1c2d">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lead Response">="Taylor Test"></label>
+        <label>Email<input id="email" value="taylor@example.com"></label>
+        <label>Service<input id="service" value="lead response automation"></label>
+        <label class="check"><input type="checkbox" id="consentApproved" checked> Approved test channel and consent</label>
+        <div class="row-actions">
+          <button class="primary" type="submit">Process event</button>
+          <button type="button" id="duplicateEvent">Submit duplicate</button>
+        </div>
+        <p id="formResult" class="result" role="status">Ready for a synthetic inquiry.</p>
+      </form>
+
+      <section class="panel controls">
+        <p class="kicker">Operator controls</p>
+        <h2>Stop conditions</h2>
+        <p>Select the most recent lead, then simulate the customer or staff outcome.</p>
+        <div class="control-grid">
+          <button data-action="reply">Customer replied</button>
+          <button data-action="booked">Booking completed</button>
+          <button data-action="optout">Customer opted out</button>
+          <button data-action="takeover">Staff takeover</button>
+        </div>
+        <hr>
+        <button id="pause" class="danger">Emergency pause</button>
+        <button id="reset">Reset sandbox</button>
+        <p class="notice">Safety control: pauses new workflow processing. Existing evidence remains visible until reset.</p>
+        <p class="helper">Restores the synthetic demonstration so scenarios can be replayed.</p>
+        <p class="exclusions">V1 excludes: SMS &middot; automated voice &middot; missed-call intake &middot; automated reminders &middot; payments &middot; autonomous quoting/sales</p>
+      </section>
+    </section>
+
+    <section class="metrics" aria-label="Synthetic demonstration activity">
+      <p class="view-label">SYNTHETIC DEMO METRICS</p>
+      <article><span>Leads</span><strong id="leadCount">0</strong></article>
+      <article><span>Simulated acknowledgments</span><strong id="messageCount">0</strong></article>
+      <article><span>Internal alerts</span><strong id="alertCount">0</strong></article>
+      <article><span>Suppressed contacts</span><strong id="suppressionCount">0</strong></article>
+    </section>
+
+    <section class="data-grid">
+      <section class="panel"><p class="kicker">Lead log</p><h2>Current records</h2><div id="leadLog" class="empty">No records yet.</div></section>
+      <section class="panel operator-panel"><p class="kicker">Operator evidence</p><h2>Audit trail</h2><div id="activityLog" class="empty">No activity yet.</div></section>
+      <section class="panel operator-panel"><p class="kicker">Operator evidence</p><h2>Simulated outbox</h2><div id="outbox" class="empty">No acknowledgments yet.</div></section>
+    </section>
+
+    <section class="panel policy-notice">
+      <p class="kicker">Pre-launch notice</p>
+      <h2>Demo only</h2>
+      <p>This page demonstrates workflow behavior with synthetic data. It is not a production client portal, does not create a service contract, and does not promise revenue, response rates, appointments, conversions, or other business outcomes.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div>Charles Kiser &mdash; Lead Response Automation Services &middot; Sole proprietor &middot; Public demo contact: available on request</div>
+    <nav class="footer-nav" aria-label="Legal and support">
+      <a href="./privacy.html">Privacy</a>
+      <a href="./terms.html">Terms</a>
+      <a href="./support.html">Support</a>
+    </nav>
+    <div class="footer-note">Demonstration environment &middot; Synthetic data only &middot; Not production</div>
+  </footer>
+  <script type="module" src="./app.mjs"></script>
+  <script>if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js"); }</script>
+</body>
+</html>
+
+
+
+

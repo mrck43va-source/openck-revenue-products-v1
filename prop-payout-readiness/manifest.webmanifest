@@ -1,0 +1,16 @@
+{
+  "name": "Prop Payout Readiness V1",
+  "short_name": "Payout Ready",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#07111f",
+  "theme_color": "#0d1c2d",
+  "icons": [
+    {
+      "src": "./icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    }
+  ]
+}
