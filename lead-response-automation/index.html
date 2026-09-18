@@ -1,8 +1,12 @@
+[Reading 119 lines from start (total: 119 lines, 0 remaining)]
+
 ﻿<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'">
+  <meta name="referrer" content="no-referrer">
   <title>Lead Response Automation Services &mdash; Synthetic Demo</title>
   <meta name="description" content="Synthetic demonstration of a bounded lead-response automation workflow by Charles Kiser &mdash; Lead Response Automation Services.">
   <link rel="stylesheet" href="./styles.css">
@@ -110,10 +114,12 @@
     <div class="footer-note">Demonstration environment &middot; Synthetic data only &middot; Not production</div>
   </footer>
   <script type="module" src="./app.mjs"></script>
-  <script>if ("serviceWorker" in navigator) { navigator.serviceWorker.register("./sw.js"); }</script>
+  <script src="./pwa-register.js"></script>
 </body>
 </html>
 
 
 
 
+
+[executed on device: DesktopWinCK (1162d03a-0e37-4b62-8dab-418990d1ab12)]
